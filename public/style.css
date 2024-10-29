@@ -1,9 +1,32 @@
 * {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+}
+.title {
+  font-family: "Titillium Web", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+/*header stuff*/
+.header {
+  font-family: "Titillium Web", serif;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
+
+.ufelade {
+  margin-right: 40px;
+}
+header button {
+  color: black;
+}
+header .header {
+  padding: 5px;
 }
 
 header,
 footer {
-  background-color: lightblue;
+  background-color: white;
   padding: 12px;
 }
