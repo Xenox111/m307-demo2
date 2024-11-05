@@ -21,8 +21,8 @@ app.get("/login", async function (req, res) {
   res.render("login", {});
 });
 
-app.get("/signin", async function (req, res) {
-  res.render("signin", {});
+app.get("/register", async function (req, res) {
+  res.render("register", {});
 });
 
 app.get("/post", async function (req, res) {
@@ -30,14 +30,26 @@ app.get("/post", async function (req, res) {
 });
 
 app.get("/ranking", async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   res.render("ranking", {});
 });
 
 app.get("/profile", async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   res.render("profile", {});
 });
 
 app.get("/foryou", async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   res.render("foryou", {});
 });
 
@@ -47,10 +59,18 @@ app.get("/foryou", async function (reg, res) {
 });
 
 app.get("/new_post", async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   res.render("new_post", {});
 });
 
 app.post("/create_post", upload.single("photo_url"), async function (req, res) {
+  if (!req.session.userid) {
+    res.redirect("/login");
+    return;
+  }
   const result = await app.locals.pool.query(
     "INSERT INTO post (title, description, category, photo_url, upload_date, user_id) VALUES ($1, $2, $3, $4, CURRENT_TIMESTAMP, 1)",
     [
