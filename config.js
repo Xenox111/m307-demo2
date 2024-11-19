@@ -13,6 +13,23 @@ export function createApp(dbconfig) {
 
   const pool = new Pool(dbconfig);
 
+  app.engine("handlebars", engine());
+  app.set("view engine", "handlebars");
+  app.set("views", "./views");
+
+  app.use(express.static("public"));
+  app.use(express.urlencoded({ extended: true }));
+  app.use(cookieParser());
+
+  app.use(
+    sessions({
+      secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+      saveUninitialized: true,
+      cookie: { maxAge: 86400000, secure: false },
+      resave: false,
+    })
+  );
+
   app.get("/register", function (req, res) {
     res.render("register");
   });
@@ -52,23 +69,6 @@ export function createApp(dbconfig) {
       }
     );
   });
-
-  app.engine("handlebars", engine());
-  app.set("view engine", "handlebars");
-  app.set("views", "./views");
-
-  app.use(express.static("public"));
-  app.use(express.urlencoded({ extended: true }));
-  app.use(cookieParser());
-
-  app.use(
-    sessions({
-      secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
-      saveUninitialized: true,
-      cookie: { maxAge: 86400000, secure: false },
-      resave: false,
-    })
-  );
 
   app.locals.pool = pool;
 
