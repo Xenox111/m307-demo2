@@ -1,7 +1,18 @@
-<h1>Ds isch z Ranking!</h1>
+<h1>Top 6 Posts</h1>
 
-<p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
+<ul>
+  {{#each posts}}
+    <li>
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+      <img src="/uploads/{{photo_url}}" alt="{{title}}" style="max-width: 200px;" />
+      <p>Category: {{category}}</p>
+      <p>Likes: {{like_count}}</p>
+      <p>Uploaded on: {{upload_date}}</p>
+    </li>
+    <hr />
+  {{/each}}
+</ul>
 
-<img src="construction.gi" width="200">
 
 {{> contactform}}

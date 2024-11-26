@@ -1,7 +1,31 @@
-<h1>Ds isch d Postdetail Site</h1>
+<h1>{{post.title}}</h1>
 
-<p>Willkommen auf meiner Website. Hier wird in Kürze eine interaktive Webapplikation entstehen. Viel Vergnügen!</p>
+<article>
+  <p>{{post.description}}</p>
+  <img src="/uploads/{{post.photo_url}}" alt="{{post.title}}" />
 
-<img src="construction.gi" width="200">
+  <p>Category: {{post.category}}</p>
+  <p>Uploaded by: {{post.username}}</p>
+  <p>Likes: {{post.like_count}}</p>
+</article>
 
-{{> contactform}}
+<hr />
+
+<!-- Comment Form -->
+<h2>Leave a Comment</h2>
+<form action="/comment/{{post.id}}" method="POST">
+  <label for="content">Your Comment:</label>
+  <textarea id="content" name="content" required></textarea>
+  <br />
+  <button type="submit">Post Comment</button>
+</form>
+
+<hr />
+
+<!-- Comments Section -->
+<h2>Comments</h2>
+<div id="comments-container"></div>
+<button id="load-more" data-page="1" data-postid="{{post.id}}">Load More</button>
+
+<!-- Link the JavaScript file -->
+<script src="/comments.js"></script>

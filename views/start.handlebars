@@ -3,4 +3,21 @@
 <p class="starttypo">The platform where you can have your work rated.</p>
 
 <button class="startbutton"><a href="/foryou">Look at others work</a></button>
-<button class="startbutton"><a href="/new_post">Look at others work</a></button>
+<button class="startbutton"><a href="/new_post">Create a Post</a></button>
+
+<!-- Section to Display Random Posts -->
+<h2>Random Posts</h2>
+<div class="random-posts">
+  {{#each posts}}
+    <article class="random-post">
+      <h3>{{title}}</h3>
+      <img
+        src="/uploads/{{photo_url}}"
+        alt="{{title}}"
+        style="max-width: 200px;"
+      />
+      <p>{{description}}</p>
+      <p>Category: {{category}}</p>
+    </article>
+  {{/each}}
+</div>

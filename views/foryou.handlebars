@@ -1,9 +1,20 @@
 <h1>For You</h1>
 
-{{#posts}}
+{{#each posts}}
   <article>
     <h2>{{title}}</h2>
-    <p>...</p>
-    <img src="/uploads/{{photo_url}}" />
+    <p>{{description}}</p>
+    <img src="/uploads/{{photo_url}}" alt="{{title}}" />
+
+    <p>Likes: {{like_count}}</p>
+    <!-- Like Button -->
+    <form action="/like/{{id}}" method="POST">
+      <input type="submit" value="Like" />
+    </form>
+
+    <!-- Details Button -->
+    <form action="/post/{{id}}" method="GET">
+      <input type="submit" value="Details and Comments" />
+    </form>
   </article>
-{{/posts}}
+{{/each}}

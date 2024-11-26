@@ -23,6 +23,11 @@ button {
   border-radius: 5px;
 }
 
+button a.header {
+  text-decoration: none;
+  color: white;
+}
+
 .ufelade {
   margin-right: 40px;
 }
@@ -83,4 +88,8 @@ input {
   border-color: none;
   color: white;
   border-radius: 5px;
+}
+
+/* for you */
+.foryou {
 }
