@@ -1,10 +1,10 @@
-<h2>Login</h2>
-
 <form action="/login" method="POST">
-  E-Mail:
-  <input name="username" type="text" /><br />
-  Passwort:
-  <input name="password" type="password" /><br />
-  <input type="submit" value="Anmelden" />
+  <p class="loginp">Username</p>
+  <input name="username" type="text" placeholder="your username" />
+  <p class="loginp">Passwort</p>
+  <input name="password" type="password" placeholder="your password" />
+  <br />
+  <br />
+  <input class="fat" type="submit" value="Login" />
+  <button class="loginbutton" href="/register">Sign In</button>
 </form>
-<a href="/register" class="button">Registrieren</a>
