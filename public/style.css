@@ -1,6 +1,10 @@
 * {
   font-family: "Titillium Web", sans-serif;
 }
+
+img{
+  width: 300px;
+}
 .title {
   font-family: "Titillium Web", serif;
   font-weight: 200;
@@ -52,7 +56,8 @@ header .header {
 header,
 footer {
   background-color: white;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .startbutton {
@@ -155,10 +160,37 @@ input::placeholder {
 /* Upload stuff */
 .uploadform {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 100%;
+  margin-top: 0%;
 }
 
 .uploadtypo {
   margin-left: 51px;
+}
+
+.uploadarea {
+  padding-bottom: 5vw;
+  padding-left: 5vw;
+}
+
+
+/* posts stufff */
+
+.random-post {
+  margin: 5vw;
+  display:flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+form {
+  margin-left: 15vw;
+  margin-top: 20vh;
+}
+
+.postcard {
+  margin: ;
 }

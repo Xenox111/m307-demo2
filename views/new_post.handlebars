@@ -8,29 +8,31 @@
   enctype="multipart/form-data"
   method="post"
 >
-  <label for="title"><p class="loginp">Title:</p></label>
-  <input type="text" id="title" name="title" required />
-  <br />
-
-  <label for="description"><p class="loginp">Description:</p></label>
-  <textarea id="description" name="description" required></textarea>
-  <br />
-
-  <label for="category"><p class="loginp">Category:</p></label>
-  <input type="text" id="category" name="category" required />
-  <br />
-
-  <label for="photo_url"><p class="loginp">Upload File:</p></label>
-  <input type="file" id="photo_url" name="photo_url" required />
-  <br />
-
-  <button class="fat" type="submit">Submit</button>
+  <div class="uploadarea">
+    <label for="title"><p class="loginp">Title:</p></label>
+    <input type="text" id="title" name="title" required />
+  </div>
+  <div class="uploadarea">
+    <label for="description"><p class="loginp">Description:</p></label>
+    <textarea id="description" name="description" required></textarea>
+  </div>
+  <div class="uploadarea">
+    <label for="category"><p class="loginp">Category:</p></label>
+    <input type="text" id="category" name="category" required />
+  </div>
+  <div class="uploadarea">
+    <label for="photo_url"><p class="loginp">Upload File:</p></label>
+    <input type="file" id="photo_url" name="photo_url" required />
+  </div>
+  <div class="uploadarea">
+    <button class="fat" type="submit">Submit</button>
+  </div>
 </form>
 
 <hr />
 
 <!-- User's posts -->
-<h2>Your Posts:</h2>
+<h2 class="uploadtypo">Your Posts</h2>
 <ul>
   {{#each userPosts}}
     <li>

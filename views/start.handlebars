@@ -13,14 +13,16 @@
 <div class="random-posts">
   {{#each posts}}
     <article class="random-post">
-      <h3>{{title}}</h3>
       <img
         src="/uploads/{{photo_url}}"
         alt="{{title}}"
         style="max-width: 200px;"
       />
+      <div class="postcard">
+      <h3>{{title}}</h3>
       <p>{{description}}</p>
       <p>Category: {{category}}</p>
+      </div>
     </article>
   {{/each}}
 </div>
