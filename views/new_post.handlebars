@@ -29,23 +29,25 @@
   </div>
 </form>
 
-<hr />
-
 <!-- User's posts -->
 <h2 class="uploadtypo">Your Posts</h2>
 <ul>
   {{#each userPosts}}
-    <li>
-      <h3>{{this.title}}</h3>
-      <p>{{this.description}}</p>
-      <img
-        src="/uploads/{{this.photo_url}}"
-        alt="{{this.title}}"
-        style="max-width: 300px;"
-      />
-      <p>Category: {{this.category}}</p>
-      <p>Uploaded on: {{this.upload_date}}</p>
+    <li class="foryou-post">
+      <div class="post1">
+        <img
+          src="/uploads/{{this.photo_url}}"
+          alt="{{this.title}}"
+          style="max-width: 300px;"
+        />
+        <div class="postcard">
+          <h3>{{this.title}}</h3>
+          <p>{{this.description}}</p>
+          <p>Category: {{this.category}}</p>
+          <p>Uploaded on: {{this.upload_date}}</p>
+        </div>
+      </div>
+
     </li>
-    <hr />
   {{/each}}
 </ul>

@@ -1,30 +1,29 @@
-<h1>{{post.title}}</h1>
-
-<article>
-  <p>{{post.description}}</p>
-  <img src="/uploads/{{post.photo_url}}" alt="{{post.title}}" />
-
-  <p>Category: {{post.category}}</p>
-  <p>Uploaded by: {{post.username}}</p>
-  <p>Likes: {{post.like_count}}</p>
+<article class="foryou-post">
+  <div class="post1">
+    <img src="/uploads/{{post.photo_url}}" alt="{{post.title}}" />
+    <div class="postcard">
+      <h1>{{post.title}}</h1>
+      <p>{{post.description}}</p>
+      <p>Category: {{post.category}}</p>
+      <p>Uploaded by: {{post.username}}</p>
+      <p>Likes: {{post.like_count}}</p>
+    </div>
+  </div>
 </article>
 
-<hr />
-
 <!-- Comment Form -->
-<h2>Leave a Comment</h2>
-<form action="/comment/{{post.id}}" method="POST">
-  <label for="content">Your Comment:</label>
+<h2 class="typoh1">Leave a Comment</h2>
+<form action="/comment/{{post.id}}" method="POST" class="contactform">
+  <label for="content"><p class="loginp">Your Comment:</p></label>
   <textarea id="content" name="content" required></textarea>
+  <br />
   <br />
   <button type="submit">Post Comment</button>
 </form>
 
-<hr />
-
 <!-- Comments Section -->
-<h2>Comments</h2>
-<div id="comments-container"></div>
+<h2 class="typoh1">Comments</h2>
+<div class="commentsection" id="comments-container"></div>
 <button id="load-more" data-page="1" data-postid="{{post.id}}">Load More</button>
 
 <!-- Link the JavaScript file -->

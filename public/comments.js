@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 comment.comment_date
               ).toLocaleString()}</small></p>
             </div>
-            <hr />
           `;
         commentsContainer.innerHTML += commentHtml;
       });

@@ -10,7 +10,9 @@ img {
   font-weight: 200;
   font-style: normal;
 }
-
+.typoh1 {
+  margin: 4vh;
+}
 /*headershitt*/
 
 header {
@@ -76,7 +78,7 @@ footer {
   margin-left: 51px;
 }
 h1.starttypo {
-  margin-top: 35vh;
+  margin-top: 37vh;
 }
 
 .startpage {
@@ -137,9 +139,14 @@ textarea {
 .loginp {
   font-weight: 900;
 }
+
 form {
   margin-left: 15vw;
   margin-top: 20vh;
+}
+
+.contactform {
+  margin-top: 10vh;
 }
 
 input::placeholder {
@@ -205,8 +212,22 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px black;
+  padding-bottom: 5vw;
 }
 
 .postcorrections {
-  align-self: flex-end;
+  margin-bottom: 10vh;
+}
+
+.post1 {
+  align-items: center;
+  align-content: space-between;
+  display: flex;
+}
+
+.commentsection {
+  margin-left: 5vh;
 }

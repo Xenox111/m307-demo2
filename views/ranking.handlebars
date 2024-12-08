@@ -1,16 +1,19 @@
-<h1>Top 6 Posts</h1>
+<h1 class="typoh1">Top 6 Posts</h1>
 
 <ul>
   {{#each posts}}
-    <li>
-      <h2>{{title}}</h2>
-      <p>{{description}}</p>
-      <img src="/uploads/{{photo_url}}" alt="{{title}}" style="max-width: 200px;" />
-      <p>Category: {{category}}</p>
-      <p>Likes: {{like_count}}</p>
-      <p>Uploaded on: {{upload_date}}</p>
+    <li class="foryou-post">
+      <div class="post1">
+        <img src="/uploads/{{photo_url}}" alt="{{title}}" style="max-width: 200px;" />
+        <div class="postcard">
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+        <p>Category: {{category}}</p>
+        <p>Likes: {{like_count}}</p>
+        <p>Uploaded on: {{upload_date}}</p>
+      </div>
+    </div>
     </li>
-    <hr />
   {{/each}}
 </ul>
 

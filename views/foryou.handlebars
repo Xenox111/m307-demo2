@@ -1,15 +1,15 @@
-<h1>For You</h1>
+<h1 class="typoh1">For You</h1>
 
 {{#each posts}}
   <article class="foryou-post">
 
     <img src="/uploads/{{photo_url}}" alt="{{title}}" />
     <div class="post">
-      <div>
+      <div class="postcorrections">
         <h2>{{title}}</h2>
         <p>{{description}}</p>
       </div>
-      <div class="postcorrections">
+      <div>
         <p>Likes: {{like_count}}</p>
         <!-- Like Button -->
         <form class="formpost" action="/like/{{id}}" method="POST">
