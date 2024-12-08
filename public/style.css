@@ -2,7 +2,7 @@
   font-family: "Titillium Web", sans-serif;
 }
 
-img{
+img {
   width: 300px;
 }
 .title {
@@ -175,22 +175,38 @@ input::placeholder {
   padding-left: 5vw;
 }
 
-
 /* posts stufff */
 
 .random-post {
   margin: 5vw;
-  display:flex;
+  display: flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-form {
-  margin-left: 15vw;
-  margin-top: 20vh;
+.postcard {
+  margin-left: 3vw;
+  align-items: center;
 }
 
-.postcard {
-  margin: ;
+.post {
+  margin-left: 3vw;
+  align-items: center;
+  align-content: space-between;
+}
+.formpost {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.foryou-post {
+  margin: 5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.postcorrections {
+  align-self: flex-end;
 }

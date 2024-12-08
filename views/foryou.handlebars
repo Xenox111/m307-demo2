@@ -1,20 +1,26 @@
 <h1>For You</h1>
 
 {{#each posts}}
-  <article>
-    <h2>{{title}}</h2>
-    <p>{{description}}</p>
+  <article class="foryou-post">
+
     <img src="/uploads/{{photo_url}}" alt="{{title}}" />
+    <div class="post">
+      <div>
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+      </div>
+      <div class="postcorrections">
+        <p>Likes: {{like_count}}</p>
+        <!-- Like Button -->
+        <form class="formpost" action="/like/{{id}}" method="POST">
+          <input type="submit" value="Like" />
+        </form>
 
-    <p>Likes: {{like_count}}</p>
-    <!-- Like Button -->
-    <form action="/like/{{id}}" method="POST">
-      <input type="submit" value="Like" />
-    </form>
-
-    <!-- Details Button -->
-    <form action="/post/{{id}}" method="GET">
-      <input type="submit" value="Details and Comments" />
-    </form>
+        <!-- Details Button -->
+        <form class="formpost" action="/post/{{id}}" method="GET">
+          <input type="submit" value="Details and Comments" />
+        </form>
+      </div>
+    </div>
   </article>
 {{/each}}
