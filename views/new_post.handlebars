@@ -1,25 +1,30 @@
-<h1>Welcome {{username}}!</h1>
-<p>Here you can upload your posts:</p>
+<h1 class="uploadtypo">Welcome {{username}}!</h1>
+<p class="uploadtypo">Here you can upload your posts:</p>
 
 <!-- Upload form -->
-<form action="/create_post" enctype="multipart/form-data" method="post">
-  <label for="title">Title:</label>
+<form
+  class="uploadform"
+  action="/create_post"
+  enctype="multipart/form-data"
+  method="post"
+>
+  <label for="title"><p class="loginp">Title:</p></label>
   <input type="text" id="title" name="title" required />
   <br />
 
-  <label for="description"><p>Description:</p></label>
+  <label for="description"><p class="loginp">Description:</p></label>
   <textarea id="description" name="description" required></textarea>
   <br />
 
-  <label for="category">Category:</label>
+  <label for="category"><p class="loginp">Category:</p></label>
   <input type="text" id="category" name="category" required />
   <br />
 
-  <label for="photo_url">Upload File:</label>
+  <label for="photo_url"><p class="loginp">Upload File:</p></label>
   <input type="file" id="photo_url" name="photo_url" required />
   <br />
 
-  <button type="submit">Submit</button>
+  <button class="fat" type="submit">Submit</button>
 </form>
 
 <hr />

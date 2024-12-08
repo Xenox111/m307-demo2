@@ -115,6 +115,15 @@ input {
   width: 30vw;
 }
 
+textarea {
+  text-decoration: none;
+  background-color: black;
+  border-color: none;
+  color: white;
+  border-radius: 7px;
+  width: 30vw;
+}
+
 /* for you */
 .foryou {
 }
@@ -141,5 +150,15 @@ input::placeholder {
   height: auto;
   font-size: 20px;
   font-weight: 700;
+  width: 30vw;
 }
 /* Upload stuff */
+.uploadform {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.uploadtypo {
+  margin-left: 51px;
+}
